@@ -3,7 +3,7 @@ import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-//ver 1.1
+
 public class main {
 	
 	static ArrayList<String> src;
@@ -33,16 +33,26 @@ public class main {
 		//TODO input the source document into arraylist, use file IO
 		//For ArrayList input: InputStream + BufferedReader + stringTokenizer
 		////
+		File source = new File("src/src.txt");
+
+		try {
+			Scanner scs = new Scanner(source);
+	
+			while (scs.hasNextLine()) {
+				 String word = scs.nextLine();
+				 src.add(word);			 
+			}
+			scs.close();
+		 } 
+		 catch (FileNotFoundException e) {
+			 e.printStackTrace();
+		 }
 		////
 		////
-		////
-		////
-		////
-		////
-		////
-		////
-		////
-		
+		for (int i=0; i<src.size(); i++) {
+			String word2 = src.get(i);
+			System.out.println(word2);
+		}
 		//TODO input word lists into two arrays
 		//For arrays input: Scanner
 		File american = new File("src/amer.txt");
@@ -53,14 +63,16 @@ public class main {
 		int cnta = 0;
 
 		while (sc.hasNextLine()) {
-		 String word = sc.nextLine();
-		 amer[cnta] = word;
-		 cnta++;
+			 String word = sc.nextLine();
+			 amer[cnta] = word;
+
+			 cnta++;
+			 
 		 }
 		 sc.close();
 		 } 
 		 catch (FileNotFoundException e) {
-		 e.printStackTrace();
+			 e.printStackTrace();
 		 }
 		
 		File british = new File("src/brit.txt");
@@ -71,14 +83,15 @@ public class main {
 		int cntb = 0;
 
 		while (scb.hasNextLine()) {
-		 String word = scb.nextLine();
-		 amer[cntb] = word;
-		 cntb++;
+			 String word = scb.nextLine();
+			 brit[cntb] = word;
+
+			 cntb++;
 		 }
 		 scb.close();
 		 } 
 		 catch (FileNotFoundException e) {
-		 e.printStackTrace();
+			 e.printStackTrace();
 		 }
 
 		
@@ -92,12 +105,12 @@ public class main {
 			String word = src.get(i);
 			for (int a=0; a<amer.length;a++)
 			{
-				if (word == amer[a])
+				if (word.equalsIgnoreCase(amer[a]) )
 					cntAmerican ++; 
 			}
 			for (int b=0; b<brit.length;b++)
 			{
-				if (word == brit[b])
+				if (word.equalsIgnoreCase(brit[b]))
 					cntBritish ++;
 			}
 		}	
