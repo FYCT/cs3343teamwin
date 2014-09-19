@@ -1,11 +1,8 @@
-import java.io.File;
-import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-
+//ver 1.1
 public class main {
-	//version 3
 	
 	static ArrayList<String> src;
 	static String[] brit, amer;
