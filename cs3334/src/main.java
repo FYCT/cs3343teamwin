@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 
 public class main {
-	//version 2
+	//version 3
 	
 	static ArrayList<String> src;
 	static String[] brit, amer;
