@@ -1,0 +1,5 @@
+anti-clockwise	
+lorry	
+counter-clockwise 
+truck
+fall
