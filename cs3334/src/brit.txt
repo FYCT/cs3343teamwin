@@ -36,3 +36,7 @@ sweets
 timetable	
 torch
 centre
+standardise
+labour
+colour
+BBC

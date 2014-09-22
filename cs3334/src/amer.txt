@@ -36,3 +36,7 @@ candy
 schedule
 flashlight
 center
+standardize
+labor
+color
+CNN

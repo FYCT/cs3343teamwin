@@ -7,8 +7,9 @@ import java.util.Scanner;
 public class main {
 	
 	static ArrayList<String> src;
-	static String[] brit, amer;
-	static final int MAX_SIZE=50;
+	static String[] brit, amer, tokens;
+	static final int MAX_SIZE=500;
+	static final String delimiters = "[, .']";
 	static Scanner s;
 	static int cntAmerican, cntBritish;
 	
@@ -29,17 +30,18 @@ public class main {
 		src=init(src);
 		brit=init(brit);
 		amer=init(amer);
+		tokens=init(tokens);
 		
 		//TODO input the source document into arraylist, use file IO
 		//For ArrayList input: InputStream + BufferedReader + stringTokenizer
 		////
-		File source = new File("src/src.txt");
+		File source = new File("src/passage.txt");
 
 		try {
 			Scanner scs = new Scanner(source);
 	
 			while (scs.hasNextLine()) {
-				 String word = scs.nextLine();
+				 String word = scs.nextLine(); 
 				 src.add(word);			 
 			}
 			scs.close();
@@ -101,19 +103,23 @@ public class main {
 		cntAmerican=0;
 		cntBritish=0;
 		
-		for (int i=0; i<src.size(); i++) {
-			String word = src.get(i);
-			for (int a=0; a<amer.length;a++)
-			{
-				if (word.equalsIgnoreCase(amer[a]) )
-					cntAmerican ++; 
+		for (int count=0; count<src.size(); count++)
+		{
+			tokens = src.get(count).split(delimiters);
+			for (int i=0; i<tokens.length; i++) {
+				String word = tokens[i];
+				for (int a=0; a<amer.length;a++)
+				{
+					if (word.equalsIgnoreCase(amer[a]) )
+						cntAmerican ++; 
+				}
+				for (int b=0; b<brit.length;b++)
+				{
+					if (word.equalsIgnoreCase(brit[b]))
+						cntBritish ++;
+				}
 			}
-			for (int b=0; b<brit.length;b++)
-			{
-				if (word.equalsIgnoreCase(brit[b]))
-					cntBritish ++;
-			}
-		}	
+		}
 		System.out.println("American words: "+cntAmerican);
 		System.out.println("British words: "+cntBritish);
 		
