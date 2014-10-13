@@ -25,6 +25,37 @@ public class main {
 
 	public static void main(String[] args) {
 		
+		String module_select = "============================================\n"
+				+              "       	Please select a module              \n"
+				+              "          Type in 1 or 2                    \n"
+				+  			   "1. Check the smell of the input passage     \n"
+				+			   "2. Get a list of misused words, for learners\n"
+				+      		   "============================================\n"
+				;
+		
+		String language_select = "==========================================\n"
+				+                "    Please select a default language      \n"
+				+                "          Type in a or b                  \n"
+				+  			     "     1. a stands for American English     \n"
+				+			     "     2. b stands for British English      \n"
+				+      		     "==========================================\n"
+				;
+		
+		String result_amer =     "==========================================\n"
+				+                "    This passage is written by american   \n"
+				+      		     "==========================================\n"
+				;
+		
+		String result_brit =     "==========================================\n"
+				+                "    This passage is written by british    \n"
+				+      		     "==========================================\n"
+				;
+		
+		String result_unkn =     "============================================\n"
+				+                "This passage is written by which countryman?\n"
+				+      		     "============================================\n"
+				;
+		
 		Arrayfiller aryfil = new Arrayfiller();
 		
 		src=aryfil.init(src);
@@ -37,11 +68,11 @@ public class main {
 		brit=aryfil.fill(brit, "src/brit.txt");
 		amer=aryfil.fill(amer, "src/amer.txt");
 		
-		System.out.println("Please select module 1 or module 2");
+		System.out.println(module_select);
 		int module = s.nextInt();
 		
 		if (module == 2) {
-			System.out.println("Please select default language(a or b)");
+			System.out.println(language_select);
 			choice = s.next().charAt(0);
 		}
 		
@@ -62,44 +93,48 @@ public class main {
 				{
 					if (word.equalsIgnoreCase(amer[a])) {
 						cntAmerican ++;
-						if (module  == 2) {
-							outA.add(word);
-							outA.add(" "); }
-						}
+						if (choice=='a')  {
+						outA.add(amer[a]);
+						outB.add(brit[a]); } }
 				}
+				
 				for (int b=0; b<brit.length;b++)
 				{
 					if (word.equalsIgnoreCase(brit[b])) {
 						cntBritish ++;
-						if (module  == 2) {
-							outB.add(word);
-							outB.add(" "); }
-						}
+						if (choice=='b')  {
+						outB.add(brit[b]);
+						outA.add(amer[b]); } }
 				}
+				
 			}
 		}
+		if (module==1)  {
 		System.out.println("American words: "+cntAmerican);
-		System.out.println("British words: "+cntBritish);
+		System.out.println("British words: "+cntBritish);  }
 		
-		result = "";
+		result = "============================================\n";
 		if (module == 2)
 		{
 			if (choice == 'a') {
 				for (int i=0; i<outB.size(); i++) {
-					result += outB.get(i); } 
-				System.out.println("Misplaced words: "+result); }
+					result += "'"+outB.get(i)+"'" + " should be replaced by " + "'"+outA.get(i)+"'" + "\n"; } 
+				result+="============================================\n";
+				System.out.println("Misplaced words: "+"\n"+result); }
 			
 			if (choice == 'b') {
 				for (int i=0; i<outA.size(); i++) {
-					result += outA.get(i); } 
-				System.out.println("Misplaced words: "+result); }
+					result += "'"+outA.get(i)+"'" + " should be replaced by " + "'"+outB.get(i)+"'" + "\n";  } 
+				result+="============================================\n";
+				System.out.println("Misplaced words: "+"\n"+result); }
 		}
-		if (cntAmerican>cntBritish)
-			System.out.println("This passage is written by american.");
-		else if (cntBritish>cntAmerican)
-			System.out.println("This passage is written by british.");
-		else
-			System.out.println("This passage is written by which countryman?");
+		if (module == 1)  {
+			if (cntAmerican>cntBritish)
+				System.out.println(result_amer);
+			else if (cntBritish>cntAmerican)
+				System.out.println(result_brit);
+			else
+				System.out.println(result_unkn);  }
 	}
 
 }
