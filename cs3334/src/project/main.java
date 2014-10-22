@@ -1,5 +1,6 @@
 package project;
 
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -20,6 +21,9 @@ public class main {
 	static String result="";
 	static char choice;
 	
+	//for ver 3
+	static Word_search word_search;
+	
 	static int cntAmerican, cntBritish;
 	
 
@@ -30,6 +34,7 @@ public class main {
 				+              "          Type in 1 or 2                    \n"
 				+  			   "1. Check the smell of the input passage     \n"
 				+			   "2. Get a list of misused words, for learners\n"
+				+			   "3. Translate & Identify                     \n"
 				+      		   "============================================\n"
 				;
 		
@@ -76,6 +81,12 @@ public class main {
 			choice = s.next().charAt(0);
 		}
 		
+		if (module==3)  {
+			System.out.println("Please enter an English word");
+			String dummy = s.next();
+			word_search = new Word_search (dummy, 2);
+		}
+		
 		cntAmerican=0;
 		cntBritish=0;
 		
@@ -109,6 +120,17 @@ public class main {
 				
 			}
 		}
+		
+		if (module == 3)  {
+			for (int a=0; a<amer.length; a++)
+			{
+				if (word_search.get_word().equalsIgnoreCase(amer[a]))
+					word_search.identify(0, brit[a]);
+				else if (word_search.get_word().equalsIgnoreCase(brit[a]))
+					word_search.identify(1, amer[a]);
+			}
+		}
+		
 		if (module==1)  {
 		System.out.println("American words: "+cntAmerican);
 		System.out.println("British words: "+cntBritish);  }
@@ -135,6 +157,10 @@ public class main {
 				System.out.println(result_brit);
 			else
 				System.out.println(result_unkn);  }
+		
+		if (module == 3)  {
+			System.out.println("This word is "+word_search.get_id()+" and corresponding word is "+word_search.get_corr());
+		}
 	}
 
 }
