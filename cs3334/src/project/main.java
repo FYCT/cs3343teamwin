@@ -6,27 +6,48 @@ import java.util.Scanner;
 
 
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class main.
+ */
 public class main {
 	
+	/** The src. */
 	static ArrayList<String> src;
+	
+	/** The tokens. */
 	static String[] brit, amer, tokens;
 	
 	//for ver 2
+	/** The out b. */
 	static ArrayList<String> outA, outB;
 
+	/** The Constant delimiters. */
 	static final String delimiters = "[, .'!@#$%^&*()?]";
 	
 	//for ver 2
+	/** The s. */
 	static Scanner s = new Scanner (System.in);
+	
+	/** The result. */
 	static String result="";
+	
+	/** The choice. */
 	static char choice;
 	
 	//for ver 3
+	/** The word_search. */
 	static Word_search word_search;
 	
+	/** The cnt british. */
 	static int cntAmerican, cntBritish;
 	
 
+	/**
+	 * The main method.
+	 *
+	 * @param args the arguments
+	 */
 	public static void main(String[] args) {
 		
 		String module_select = "============================================\n"

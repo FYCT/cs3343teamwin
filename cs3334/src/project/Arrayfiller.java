@@ -5,22 +5,49 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class Arrayfiller.
+ */
 public class Arrayfiller {
 	
+	/** The max size. */
 	final int MAX_SIZE=500;
 	
+	/**
+	 * Instantiates a new arrayfiller.
+	 */
 	public Arrayfiller () {}
 	
+	/**
+	 * Inits the.
+	 *
+	 * @param source the source
+	 * @return the array list
+	 */
 	public ArrayList<String> init (ArrayList<String> source) {
 		source = new ArrayList<String>();
 		return source;
 	}
 	
+	/**
+	 * Inits the.
+	 *
+	 * @param source the source
+	 * @return the string[]
+	 */
 	public String[] init (String[] source) {
 		source = new String[MAX_SIZE];
 		return source;
 	}
 	
+	/**
+	 * Fill.
+	 *
+	 * @param src the src
+	 * @param path the path
+	 * @return the array list
+	 */
 	public ArrayList<String> fill (ArrayList<String> src, String path) {
 		File source = new File(path);
 
@@ -40,6 +67,13 @@ public class Arrayfiller {
 		return src;
 	}
 	
+	/**
+	 * Fill.
+	 *
+	 * @param src the src
+	 * @param path the path
+	 * @return the string[]
+	 */
 	public String[] fill (String[] src, String path) {
 		
 	
