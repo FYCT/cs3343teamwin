@@ -1,6 +1,4 @@
 package test;
-import static org.junit.Assert.*;
-
 import java.util.ArrayList;
 
 import junit.framework.TestCase;
@@ -8,6 +6,7 @@ import junit.framework.TestCase;
 import org.junit.Test;
 
 import project.Arrayfiller;
+
 
 
 // TODO: Auto-generated Javadoc
@@ -97,4 +96,9 @@ public class TestArrayfiller extends TestCase{
 		tokens = list.get(0).split("c");
 		assertEquals(tokens.length, 2);
 	}
+	
+	/**
+	 * test if result has duplicate lines
+	 */
+	
 }

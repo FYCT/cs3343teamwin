@@ -50,6 +50,10 @@ public class main {
 	 */
 	public static void main(String[] args) {
 		
+		Menu();
+	}
+	public static void Menu()
+	{
 		String module_select = "============================================\n"
 				+              "       	Please select a module              \n"
 				+              "          Type in 1 or 2                    \n"
@@ -182,6 +186,7 @@ public class main {
 		if (module == 3)  {
 			System.out.println("This word is "+word_search.get_id()+" and corresponding word is "+word_search.get_corr());
 		}
+	
 	}
 
 }
