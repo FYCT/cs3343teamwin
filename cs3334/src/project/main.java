@@ -146,6 +146,10 @@ public class main {
 			}
 		}
 		
+		DuplicateFixer df = new DuplicateFixer();
+		df.fix(outA);
+		df.fix(outB);
+		
 		if (module == 3)  {
 			for (int a=0; a<amer.length; a++)
 			{
