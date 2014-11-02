@@ -56,7 +56,7 @@ public class main {
 	{
 		String module_select = "============================================\n"
 				+              "       	Please select a module              \n"
-				+              "          Type in 1 or 2                    \n"
+				+              "          Type in 1 or 2 or 3               \n"
 				+  			   "1. Check the smell of the input passage     \n"
 				+			   "2. Get a list of misused words, for learners\n"
 				+			   "3. Translate & Identify                     \n"
@@ -145,10 +145,12 @@ public class main {
 				
 			}
 		}
-		
-		DuplicateFixer df = new DuplicateFixer();
-		df.fix(outA);
-		df.fix(outB);
+		if (module == 2)
+		{
+			DuplicateFixer df = new DuplicateFixer();
+			df.fix(outA);
+			df.fix(outB);
+		}
 		
 		if (module == 3)  {
 			for (int a=0; a<amer.length; a++)
