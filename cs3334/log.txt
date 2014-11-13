@@ -1,0 +1,83 @@
+CS3343
+
+=============================
+[Ver 2.2.2]
+
+- Menu UI adjustment
+- Exception Handling added
+
+-log.txt included in project
+
+=============================
+[Ver 2.2.1]
+
+- DuplicateFixer class implemented
+- Testcase in TestMain.java passed
+
+=============================
+[Ver 2.2.0]
+
+- statements in main moved to "Menu" method
+- automate testcase to check for duplicate lines in "TestMain" added
+
+=============================
+[Ver 2.1.4.2]
+
+- TestPoker removed
+=============================
+[Ver 2.1.4.1]
+
+- doc location changed
+=============================
+[Ver 2.1.4]
+
+- javadoc included
+
+=============================
+[Ver 2.1.3]
+
+- new java file "Word_search.java"
+- Third feature - Translate & Identify added
+
+=============================
+[Ver 2.1.2]
+
+-library update:
+"src.txt", "amer.txt", "brit.txt", "passage.txt"
+
+=============================
+[Ver 2.1.1]
+
+"main.java" updated:
+- user interface improved
+
+=============================
+[Ver 2.1.0]
+
+- "blank.txt", "oneline.txt", "split.txt" added 
+- "project" and "test" packages set up
+- JUnit4 Library added
+- EclEmma set up
+
+=============================
+[Ver 2.0.1]
+
+- Library Updated
+
+=============================
+[Ver 2.0.0]
+
+- Choose of module
+- Choose of language
+
+=============================
+[Ver 1.3.1] 
+
+- Arrayfiller class created
+- main class modified
+
+=============================
+[Ver 1.3.0 and before]
+
+- src.txt, amer.txt, brit.txt
+- main class
