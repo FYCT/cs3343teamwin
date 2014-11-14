@@ -12,7 +12,7 @@ public class Word_search {
 	/** The id. */
 	int id;
 	//corresponding_word;
-	/** The corr. */
+	/** The corresponding. */
 	String corr;
 
 	/**
@@ -63,7 +63,7 @@ public class Word_search {
 	/**
 	 * Gets the _corr.
 	 *
-	 * @return the _corr
+	 * @return the corresponding
 	 */
 	public String get_corr ()  {
 		if (this.id==2)

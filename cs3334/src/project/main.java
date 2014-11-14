@@ -163,8 +163,13 @@ public class main {
 		}
 		
 		if (module==1)  {
-		System.out.println("American words: "+cntAmerican);
-		System.out.println("British words: "+cntBritish);  }
+		
+			
+		int totalCnt = cntAmerican + cntBritish;
+		
+		System.out.println("American words: "+(double)cntAmerican/totalCnt*100+"%");
+		System.out.println("British words: "+(double)cntBritish/totalCnt*100+"%");
+		}
 		
 		result = "============================================\n";
 		if (module == 2)

@@ -1,6 +1,13 @@
 CS3343
 
 =============================
+[Ver 2.2.3]
+
+- Minor update: 
+changed the output of option 1 to  percentage
+updated javadoc
+
+=============================
 [Ver 2.2.2]
 
 - Menu UI adjustment

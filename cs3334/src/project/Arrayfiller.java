@@ -20,10 +20,10 @@ public class Arrayfiller {
 	public Arrayfiller () {}
 	
 	/**
-	 * Inits the.
+	 * Inits the array list.
 	 *
-	 * @param source the source
-	 * @return the array list
+	 * @param source the uninitialized array list
+	 * @return the array list which is initialized
 	 */
 	public ArrayList<String> init (ArrayList<String> source) {
 		source = new ArrayList<String>();
@@ -31,10 +31,10 @@ public class Arrayfiller {
 	}
 	
 	/**
-	 * Inits the.
+	 * Inits the array.
 	 *
-	 * @param source the source
-	 * @return the string[]
+	 * @param source uninitialized array
+	 * @return the string[] which is initialized
 	 */
 	public String[] init (String[] source) {
 		source = new String[MAX_SIZE];
@@ -44,9 +44,9 @@ public class Arrayfiller {
 	/**
 	 * Fill.
 	 *
-	 * @param src the src
+	 * @param src the source text file
 	 * @param path the path
-	 * @return the array list
+	 * @return the array list which contains data
 	 */
 	public ArrayList<String> fill (ArrayList<String> src, String path) {
 		File source = new File(path);
@@ -70,9 +70,9 @@ public class Arrayfiller {
 	/**
 	 * Fill.
 	 *
-	 * @param src the src
+	 * @param src the source text file
 	 * @param path the path
-	 * @return the string[]
+	 * @return the array list which contains data
 	 */
 	public String[] fill (String[] src, String path) {
 		
