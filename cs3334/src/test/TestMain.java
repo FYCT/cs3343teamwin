@@ -11,6 +11,10 @@ import org.junit.Before;
 import org.junit.Test;
 
 import project.main;
+
+/**
+ * The Class TestMain.
+ */
 public class TestMain extends TestCase{
 
 	@Before
@@ -21,12 +25,15 @@ public class TestMain extends TestCase{
 	public void tearDown() throws Exception {
 	}
 
+	/**
+	 * test if result has duplicate lines
+	 */
 	@Test
 	public void testDuplicate(){
 		
 		//2: Get a list of misused words, for learners
 		//b: British English 
-		String input = "2\nb";
+		String input = "d\n2\nb";
 		System.setIn(new ByteArrayInputStream(
 		           input.getBytes()));
 		ByteArrayOutputStream outContent = new ByteArrayOutputStream();

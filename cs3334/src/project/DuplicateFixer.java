@@ -1,8 +1,13 @@
 package project;
 
 import java.util.ArrayList;
-
+/**
+ * The Class DuplicateFixer.
+ */
 public class DuplicateFixer {
+	/**
+	 * The method to fix duplicates.
+	 */
 	public void fix (ArrayList<String> problematic)
 	{
 		for (int i=0; i<problematic.size(); i++)

@@ -50,7 +50,7 @@ public class Word_search {
 	/**
 	 * Gets the _id.
 	 *
-	 * @return the _id
+	 * @return the decision
 	 */
 	public String get_id ()  {
 		if (this.id==0)

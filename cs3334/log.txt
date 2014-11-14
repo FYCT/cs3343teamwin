@@ -1,4 +1,14 @@
 CS3343
+=============================
+[Ver 2.2.4]
+
+- Major update: 
+added news to passage.txt
+updated javadoc of newer classes since week 9
+Updated main.java to take in other passages by allowing user to type path
+"d" WILL USE DEFAULT path
+Updated testMain.java to adopt the new input sequence.
+
 
 =============================
 [Ver 2.2.3]

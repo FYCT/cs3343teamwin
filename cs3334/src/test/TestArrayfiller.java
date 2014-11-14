@@ -97,8 +97,6 @@ public class TestArrayfiller extends TestCase{
 		assertEquals(tokens.length, 2);
 	}
 	
-	/**
-	 * test if result has duplicate lines
-	 */
+	
 	
 }

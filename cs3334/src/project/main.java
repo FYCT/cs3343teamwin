@@ -12,34 +12,34 @@ import java.util.Scanner;
  */
 public class main {
 	
-	/** The src. */
+	/** The array list which contains the source file. */
 	static ArrayList<String> src;
 	
-	/** The tokens. */
+	/** The arrays which specify the libraries the the array used for splitting. */
 	static String[] brit, amer, tokens;
 	
 	//for ver 2
-	/** The out b. */
+	/** The output array lists. */
 	static ArrayList<String> outA, outB;
 
 	/** The Constant delimiters. */
 	static final String delimiters = "[, .'!@#$%^&*()?]";
 	
 	//for ver 2
-	/** The s. */
+	/** The scanner object. */
 	static Scanner s = new Scanner (System.in);
 	
-	/** The result. */
+	/** The result String. */
 	static String result="";
 	
-	/** The choice. */
+	/** The choice for module 2. */
 	static char choice;
 	
 	//for ver 3
 	/** The word_search. */
 	static Word_search word_search;
 	
-	/** The cnt british. */
+	/** The counts for each type of word. */
 	static int cntAmerican, cntBritish;
 	
 
@@ -47,6 +47,7 @@ public class main {
 	 * The main method.
 	 *
 	 * @param args the arguments
+	 * @return calls the Menu method to make the class testable.
 	 */
 	public static void main(String[] args) {
 		
@@ -54,6 +55,12 @@ public class main {
 	}
 	public static void Menu()
 	{
+		String input_passage = "============================================\n"
+				+			   "  Please input the location of the passage  \n"
+				+              "         Hint: [folder]"+"/"+"[name].txt    \n"
+				+              "       Type 'd' to use default path         \n"
+				+              "============================================\n"
+				;
 		String module_select = "============================================\n"
 				+              "       	Please select a module              \n"
 				+              "          Type in 1 or 2 or 3               \n"
@@ -93,8 +100,12 @@ public class main {
 		amer=aryfil.init(amer);
 		tokens=aryfil.init(tokens);
 		
+		System.out.println(input_passage);
+		String location = s.next();
+		if (location.equalsIgnoreCase("d"))
+			location="src/passage.txt";
 		
-		src=aryfil.fill(src, "src/passage.txt");
+		src=aryfil.fill(src, location);
 		brit=aryfil.fill(brit, "src/brit.txt");
 		amer=aryfil.fill(amer, "src/amer.txt");
 		
